@@ -1,27 +1,33 @@
 graph = {
-  '1' : ['30','91'],
-  '5' : ['21', '44'],
-  '7' : ['82'],
-  '6' : [],
-  '15' : ['8'],
-  '22' : []
+  'A' : ['B','C'],
+  'B' : ['D', 'E'],
+  'C' : ['F'],
+  'D' : [],
+  'E' : ['F'],
+  'F' : []
 }
 
 visited = [] # List to keep track of visited nodes.
+queue = []     #Initialize a queue
 
 def bfs(visited, graph, node):
-    visited.append(node)
-    print("Visited: ", node)
-
-    for neighbour in graph[node]:
-        if neighbour not in visited:
-            visited.append(neighbour)
-            print("Visited neighbour: ", neighbour)
-
-def main():
+    
     print("Breadth First Search: \n")
-    for i in graph: bfs(visited, graph, i)
-    print("\nVisited nodes in order:")        
-    for i in visited: print(i, end=" ")
+    visited.append(node)
+    queue.append(node)
+    print("Node", node + " is visited and queued.")
+    
+    while queue:
+        currentNode = queue.pop(0)
+        print ("Node", currentNode + " is dequeued.")
+        
+        for childNode in graph[currentNode]:
+            if childNode not in visited:
+                visited.append(childNode)
+                queue.append(childNode)
+                print("Child node", childNode + " is visited and queued.")
+                
+    for visNode in visited: print(visNode, end=" ")
 
-if __name__ == "__main__": main()
+# Driver Code
+bfs(visited, graph, 'A')
