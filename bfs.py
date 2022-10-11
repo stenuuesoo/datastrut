@@ -8,7 +8,7 @@ graph = {
 }
 
 visited = [] # List to keep track of visited nodes.
-queue = []     #Initialize a queue
+queue = [] # Initialize a queue
 
 def bfs(visited, graph, node):
     
@@ -27,7 +27,7 @@ def bfs(visited, graph, node):
                 queue.append(childNode)
                 print("Child node", childNode + " is visited and queued.")
                 
-    for visNode in visited: print(visNode, end=" ")
+    for visitedNode in visited: print(visitedNode, end=" ")
 
 # Driver Code
 bfs(visited, graph, 'A')
