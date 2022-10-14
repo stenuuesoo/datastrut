@@ -1,8 +1,7 @@
 # datastrut
 
-Breadth First Search.
-
-dfs
-hashmap
-fifo
-bst
+Breadth First Search
+Depth First Search
+First In Last Out
+Recursive sum of array with index
+Recursive prime number checker
