@@ -1,6 +1,8 @@
 # You are given three integers and  representing the dimensions of a cuboid along with an integer . 
 # Print a list of all possible coordinates given by  on a 3D grid where the sum of x,y,z is not equal to n
 
+# Added unit tests and logic.  This is a good example of how to use list comprehension
+
 import unittest
 
 class TestCuboid(unittest.TestCase):
