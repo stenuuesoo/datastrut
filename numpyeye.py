@@ -14,4 +14,4 @@ if __name__ == '__main__':
         print(("\n{}").format(main()))
         unittest.main()
     except:
-        print("Something's happening.")        
+        print("Something's happening.")
